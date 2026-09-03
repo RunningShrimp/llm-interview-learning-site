@@ -1,0 +1,12 @@
+{
+  "name": "llm-interview-learning-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "大模型算法岗 · 零基础交互式学习网站（纯静态，GitHub Pages 部署）",
+  "scripts": {
+    "validate": "node tools/validate-data.js --all",
+    "test:judge": "node tools/test-judge.js",
+    "serve": "python3 -m http.server 8080"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "site": {
+    "title": "大模型算法岗 · 零基础交互式学习",
+    "audience": "纯小白：编程基础薄弱，未系统学过机器学习，目标通过大模型算法岗面试",
+    "version": "1.0.0",
+    "generated": "2026-09-03"
+  },
+  "modules": [
+    { "id": "M1", "title": "数学与编程地基", "slug": "foundations", "icon": "🧮", "color": "#6366f1", "dataFile": "data/m1-foundations.js", "summary": "线代/概率/梯度与 Python/PyTorch 最小必备，后续一切的地基" },
+    { "id": "M2", "title": "传统机器学习", "slug": "traditional-ml", "icon": "🌲", "color": "#0ea5e9", "dataFile": "data/m2-traditional-ml.js", "summary": "线性模型、树模型、SVM、评估指标与特征工程" },
+    { "id": "M3", "title": "深度学习基础", "slug": "deep-learning", "icon": "🧠", "color": "#8b5cf6", "dataFile": "data/m3-deep-learning.js", "summary": "MLP、反向传播、优化器、正则化、CNN/RNN" },
+    { "id": "M4", "title": "NLP 与词向量", "slug": "nlp-embeddings", "icon": "📚", "color": "#14b8a6", "dataFile": "data/m4-nlp-embeddings.js", "summary": "分词、Word2Vec、seq2seq 与注意力起源" },
+    { "id": "M5", "title": "Transformer 与 LLM 架构", "slug": "transformer", "icon": "⚡", "color": "#f59e0b", "dataFile": "data/m5-transformer.js", "summary": "自注意力、位置编码、LayerNorm 与主流架构对比" },
+    { "id": "M6", "title": "预训练与微调", "slug": "training-finetuning", "icon": "🏋️", "color": "#ef4444", "dataFile": "data/m6-training-finetuning.js", "summary": "预训练目标、Scaling Laws、SFT、LoRA、RLHF、DPO" },
+    { "id": "M7", "title": "推理与部署", "slug": "inference-deployment", "icon": "🚀", "color": "#10b981", "dataFile": "data/m7-inference-deployment.js", "summary": "KV Cache、采样策略、量化、蒸馏与推理框架" },
+    { "id": "M8", "title": "LLM 应用", "slug": "llm-applications", "icon": "🧩", "color": "#3b82f6", "dataFile": "data/m8-llm-applications.js", "summary": "Prompt Engineering、RAG、Agent 与效果评估" },
+    { "id": "M9", "title": "手撕代码", "slug": "hand-code", "icon": "💻", "color": "#ec4899", "dataFile": "data/m9-hand-code.js", "summary": "数据结构算法题 + LLM 算法手撕（注意力/Tokenizer 等）" },
+    { "id": "M10", "title": "面试软技能", "slug": "interview-skills", "icon": "🎯", "color": "#f97316", "dataFile": "data/m10-interview-skills.js", "summary": "项目深挖、场景设计题、开放题应答框架与复盘" }
+  ],
+  "lessons": [
+    { "id": "m1-01", "module": "M1", "title": "向量与矩阵", "oneLiner": "用\"表格与变换\"理解 AI 的基本材料", "prerequisites": [], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 10 },
+    { "id": "m1-02", "module": "M1", "title": "概率与分布", "oneLiner": "用\"天气预报\"的语言描述不确定性", "prerequisites": [], "exerciseTypes": ["single", "judge"], "estMinutes": 10 },
+    { "id": "m1-03", "module": "M1", "title": "导数与梯度", "oneLiner": "下山时每一步该往哪走", "prerequisites": ["m1-01"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 12 },
+    { "id": "m1-04", "module": "M1", "title": "Python 最小必备", "oneLiner": "变量、列表、字典、循环与函数五件事", "prerequisites": [], "exerciseTypes": ["single", "code", "fill"], "estMinutes": 15 },
+    { "id": "m1-05", "module": "M1", "title": "NumPy 与 PyTorch 张量", "oneLiner": "批量计算的乐高积木", "prerequisites": ["m1-01", "m1-04"], "exerciseTypes": ["single", "code", "judge"], "estMinutes": 15 },
+    { "id": "m1-06", "module": "M1", "title": "Sigmoid 与 Softmax", "oneLiner": "把分数变成概率的两兄弟", "prerequisites": ["m1-02", "m1-03"], "exerciseTypes": ["single", "judge", "code"], "estMinutes": 12 },
+
+    { "id": "m2-01", "module": "M2", "title": "机器学习全景", "oneLiner": "数据驱动的三种学习范式", "prerequisites": ["m1-03"], "exerciseTypes": ["single", "judge"], "estMinutes": 10 },
+    { "id": "m2-02", "module": "M2", "title": "线性回归与损失函数", "oneLiner": "画一条最贴近散点的直线", "prerequisites": ["m1-03", "m1-04"], "exerciseTypes": ["single", "fill", "code"], "estMinutes": 12 },
+    { "id": "m2-03", "module": "M2", "title": "逻辑回归", "oneLiner": "预测\"是/否\"的概率机器", "prerequisites": ["m2-02", "m1-06"], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 12 },
+    { "id": "m2-04", "module": "M2", "title": "决策树与集成学习", "oneLiner": "一棵树问问题，一片森林更可靠", "prerequisites": ["m2-01"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 14 },
+    { "id": "m2-05", "module": "M2", "title": "支持向量机 SVM", "oneLiner": "在两堆点之间修最宽的马路", "prerequisites": ["m1-01", "m2-03"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+    { "id": "m2-06", "module": "M2", "title": "评估指标", "oneLiner": "准确率、精确率、召回率、F1、AUC 各管什么", "prerequisites": ["m2-03"], "exerciseTypes": ["single", "fill", "order"], "estMinutes": 14 },
+    { "id": "m2-07", "module": "M2", "title": "特征工程与交叉验证", "oneLiner": "给模型喂好饭、多考几次试", "prerequisites": ["m2-01"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 12 },
+
+    { "id": "m3-01", "module": "M3", "title": "神经元与 MLP", "oneLiner": "把许多\"加权开关\"连成网络", "prerequisites": ["m1-03", "m2-03"], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 12 },
+    { "id": "m3-02", "module": "M3", "title": "反向传播", "oneLiner": "责任沿着网络逐层回传", "prerequisites": ["m3-01"], "exerciseTypes": ["single", "order", "fill"], "estMinutes": 15 },
+    { "id": "m3-03", "module": "M3", "title": "优化器", "oneLiner": "从 SGD 到 Adam 的进化史", "prerequisites": ["m3-02"], "exerciseTypes": ["single", "judge", "code"], "estMinutes": 14 },
+    { "id": "m3-04", "module": "M3", "title": "过拟合与正则化", "oneLiner": "别把模拟题背得太死", "prerequisites": ["m3-01"], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 12 },
+    { "id": "m3-05", "module": "M3", "title": "初始化与归一化", "oneLiner": "让训练赢在起跑线、稳住节奏", "prerequisites": ["m3-02"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+    { "id": "m3-06", "module": "M3", "title": "卷积神经网络 CNN", "oneLiner": "用滑动的小窗口看图像", "prerequisites": ["m3-01"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 13 },
+    { "id": "m3-07", "module": "M3", "title": "RNN 与 LSTM", "oneLiner": "带记忆的逐词阅读者", "prerequisites": ["m3-01"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 13 },
+
+    { "id": "m4-01", "module": "M4", "title": "分词与 Token", "oneLiner": "文字如何变成机器能吃的数字", "prerequisites": ["m1-04"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 12 },
+    { "id": "m4-02", "module": "M4", "title": "Word2Vec 词向量", "oneLiner": "国王 − 男人 + 女人 ≈ 女王", "prerequisites": ["m4-01", "m3-01"], "exerciseTypes": ["single", "judge"], "estMinutes": 13 },
+    { "id": "m4-03", "module": "M4", "title": "seq2seq 与编码器-解码器", "oneLiner": "翻译流水线：读进去、写出来", "prerequisites": ["m3-07", "m4-02"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 13 },
+    { "id": "m4-04", "module": "M4", "title": "注意力机制的起源", "oneLiner": "翻译时学会\"回头看\"重点词", "prerequisites": ["m4-03"], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 12 },
+    { "id": "m4-05", "module": "M4", "title": "语言模型评估", "oneLiner": "困惑度与 BLEU 到底在量什么", "prerequisites": ["m4-03"], "exerciseTypes": ["single", "fill"], "estMinutes": 10 },
+
+    { "id": "m5-01", "module": "M5", "title": "自注意力机制", "oneLiner": "开会时挑重点听：Q/K/V 全解", "prerequisites": ["m4-04"], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 16 },
+    { "id": "m5-02", "module": "M5", "title": "多头注意力", "oneLiner": "八个小组从不同角度看同一份材料", "prerequisites": ["m5-01"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 12 },
+    { "id": "m5-03", "module": "M5", "title": "位置编码", "oneLiner": "句子语序的秘密档案", "prerequisites": ["m5-01"], "exerciseTypes": ["single", "judge", "code"], "estMinutes": 13 },
+    { "id": "m5-04", "module": "M5", "title": "残差连接与 LayerNorm", "oneLiner": "高速路上的应急车道与限速牌", "prerequisites": ["m3-05", "m5-01"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+    { "id": "m5-05", "module": "M5", "title": "Transformer 整体结构", "oneLiner": "积木总装图：从输入到输出", "prerequisites": ["m5-01", "m5-02", "m5-03", "m5-04"], "exerciseTypes": ["order", "single", "judge"], "estMinutes": 15 },
+    { "id": "m5-06", "module": "M5", "title": "BERT/GPT/T5 架构对比", "oneLiner": "三种\"读书方式\"决定三种用途", "prerequisites": ["m5-05"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 14 },
+
+    { "id": "m6-01", "module": "M6", "title": "预训练目标", "oneLiner": "完形填空 vs 文字接龙", "prerequisites": ["m5-06"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+    { "id": "m6-02", "module": "M6", "title": "Scaling Laws", "oneLiner": "大力真的出奇迹吗：三条定律", "prerequisites": ["m6-01"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+    { "id": "m6-03", "module": "M6", "title": "SFT 指令微调", "oneLiner": "让通才变成听话的助手", "prerequisites": ["m6-01"], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 13 },
+    { "id": "m6-04", "module": "M6", "title": "LoRA 与参数高效微调", "oneLiner": "冻结大脑、训练\"小外挂\"", "prerequisites": ["m3-02", "m6-03"], "exerciseTypes": ["single", "judge", "code"], "estMinutes": 14 },
+    { "id": "m6-05", "module": "M6", "title": "RLHF", "oneLiner": "人类反馈强化学习三步曲", "prerequisites": ["m6-03"], "exerciseTypes": ["single", "order", "judge"], "estMinutes": 15 },
+    { "id": "m6-06", "module": "M6", "title": "DPO", "oneLiner": "绕开奖励模型的直接偏好优化", "prerequisites": ["m6-05"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+
+    { "id": "m7-01", "module": "M7", "title": "KV Cache", "oneLiner": "聊天机器人的课堂笔记", "prerequisites": ["m5-01"], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 14 },
+    { "id": "m7-02", "module": "M7", "title": "采样策略", "oneLiner": "temperature / top-k / top-p 三旋钮", "prerequisites": ["m5-05"], "exerciseTypes": ["single", "judge", "code"], "estMinutes": 13 },
+    { "id": "m7-03", "module": "M7", "title": "模型量化", "oneLiner": "把高清地图折叠进口袋", "prerequisites": ["m5-05"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+    { "id": "m7-04", "module": "M7", "title": "知识蒸馏", "oneLiner": "名师讲课、学生做笔记", "prerequisites": ["m6-02", "m3-01"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+    { "id": "m7-05", "module": "M7", "title": "推理框架与 vLLM", "oneLiner": "PagedAttention 像\"酒店分房\"", "prerequisites": ["m7-01"], "exerciseTypes": ["single", "judge"], "estMinutes": 12 },
+    { "id": "m7-06", "module": "M7", "title": "显存估算与批处理", "oneLiner": "一趟货车能装多少货", "prerequisites": ["m7-01", "m7-03"], "exerciseTypes": ["single", "fill", "judge"], "estMinutes": 14 },
+
+    { "id": "m8-01", "module": "M8", "title": "Prompt Engineering", "oneLiner": "把话说明白是一门手艺", "prerequisites": ["m6-03"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 12 },
+    { "id": "m8-02", "module": "M8", "title": "RAG 检索增强", "oneLiner": "开卷考试：先查资料再回答", "prerequisites": ["m8-01", "m4-02"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 15 },
+    { "id": "m8-03", "module": "M8", "title": "Agent 智能体", "oneLiner": "会定计划、会用工具的实习生", "prerequisites": ["m8-01"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 14 },
+    { "id": "m8-04", "module": "M8", "title": "LLM 效果评估", "oneLiner": "怎么证明你的模型变好了", "prerequisites": ["m8-02"], "exerciseTypes": ["single", "judge", "fill"], "estMinutes": 12 },
+    { "id": "m8-05", "module": "M8", "title": "微调 vs RAG 选型", "oneLiner": "修发动机还是装导航", "prerequisites": ["m6-04", "m8-02"], "exerciseTypes": ["single", "judge"], "estMinutes": 10 },
+
+    { "id": "m9-01", "module": "M9", "title": "哈希表与两数之和", "oneLiner": "用字典把 O(n²) 降到 O(n)", "prerequisites": ["m1-04"], "exerciseTypes": ["code", "single", "judge"], "estMinutes": 14 },
+    { "id": "m9-02", "module": "M9", "title": "二分查找", "oneLiner": "翻字典找页码的艺术", "prerequisites": ["m1-04"], "exerciseTypes": ["code", "single", "fill"], "estMinutes": 14 },
+    { "id": "m9-03", "module": "M9", "title": "手撕 Softmax", "oneLiner": "三行代码与数值稳定的陷阱", "prerequisites": ["m1-06"], "exerciseTypes": ["code", "fill", "judge"], "estMinutes": 14 },
+    { "id": "m9-04", "module": "M9", "title": "手撕单头自注意力", "oneLiner": "十行 PyTorch 写出 Q/K/V", "prerequisites": ["m5-01", "m1-05"], "exerciseTypes": ["code", "order", "judge"], "estMinutes": 18 },
+    { "id": "m9-05", "module": "M9", "title": "手撕 BPE 分词", "oneLiner": "像拼乐高一样合并出词表", "prerequisites": ["m4-01"], "exerciseTypes": ["code", "order", "single"], "estMinutes": 16 },
+    { "id": "m9-06", "module": "M9", "title": "手撕 top-k / top-p 采样", "oneLiner": "给概率分布\"修剪枝\"", "prerequisites": ["m7-02", "m1-05"], "exerciseTypes": ["code", "judge"], "estMinutes": 14 },
+
+    { "id": "m10-01", "module": "M10", "title": "项目深挖与 STAR 法则", "oneLiner": "把经历讲成面试官爱听的故事", "prerequisites": [], "exerciseTypes": ["order", "judge", "single"], "estMinutes": 12 },
+    { "id": "m10-02", "module": "M10", "title": "场景设计题", "oneLiner": "\"如果让你做一个 XX，你怎么设计？\"", "prerequisites": ["m8-02", "m8-03"], "exerciseTypes": ["single", "order", "judge"], "estMinutes": 14 },
+    { "id": "m10-03", "module": "M10", "title": "开放题与追问应对", "oneLiner": "不会答时的三板斧", "prerequisites": ["m10-01"], "exerciseTypes": ["single", "judge", "order"], "estMinutes": 12 },
+    { "id": "m10-04", "module": "M10", "title": "反问与复盘", "oneLiner": "面试最后十分钟的价值", "prerequisites": ["m10-01"], "exerciseTypes": ["single", "judge"], "estMinutes": 10 }
+  ]
+}

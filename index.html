@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>大模型算法岗 · 零基础交互式学习</title>
+  <meta name="description" content="面向纯小白的大模型算法岗面试学习站：10 个模块 58 个知识点，生活类比 + 动画 + 例题判题 + 间隔复习，纯静态零依赖。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🧠</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="topnav" aria-label="站点导航">
+    <a class="brand" href="#/"><span class="brand-dot">🧠</span> 大模型算法岗 · 零基础交互式学习</a>
+    <div class="nav-links">
+      <a href="#/">学习地图</a>
+      <a href="#/review">今日复习</a>
+      <a href="#/graph">知识图谱</a>
+      <span class="nav-badge" id="nav-progress" title="已掌握 / 总知识点">0/0</span>
+    </div>
+  </nav>
+
+  <main id="app">
+    <div class="placeholder"><span class="placeholder-icon">📚</span><p>正在加载学习内容…</p></div>
+  </main>
+
+  <noscript>
+    <div class="placeholder">本站需要启用 JavaScript 才能交互学习。</div>
+  </noscript>
+
+  <!-- 运行时：先骨架，后数据（数据文件顺序 = syllabus 模块顺序） -->
+  <script src="js/site-data.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/judge.js"></script>
+  <script src="js/app.js"></script>
+  <script src="data/m1-foundations.js"></script>
+  <script src="data/m2-traditional-ml.js"></script>
+  <script src="data/m3-deep-learning.js"></script>
+  <script src="data/m4-nlp-embeddings.js"></script>
+  <script src="data/m5-transformer.js"></script>
+  <script src="data/m6-training-finetuning.js"></script>
+  <script src="data/m7-inference-deployment.js"></script>
+  <script src="data/m8-llm-applications.js"></script>
+  <script src="data/m9-hand-code.js"></script>
+  <script src="data/m10-interview-skills.js"></script>
+</body>
+</html>
