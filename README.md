@@ -77,7 +77,6 @@ git push -u origin main
 │   └── m10-interview-skills.js  # M10 面试软技能（4 课）
 ├── syllabus.json           # 大纲（唯一事实源：58 课的 id/前置/题型规划）
 ├── docs/SCHEMA.md          # 数据契约（新增/修改内容的规范）
-├── docs/qa/                # 验收截图
 ├── tools/
 │   ├── validate-data.js    # 数据校验器（结构 + 题型覆盖 + 大纲一致性）
 │   └── test-judge.js       # 判题器单测 + 全站 184 题官方答案一致性测试
