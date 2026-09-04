@@ -948,3 +948,9 @@
     init();
   }
 })();
+
+/* SW 注册（推广自标杆 architect-exam-learning app.js:996-998，OPT-01） */
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  try { var __swUrl = new URL('../', (document.currentScript && document.currentScript.src) || location.href).pathname;
+    navigator.serviceWorker.register(__swUrl).catch(function () {}); } catch (e) {}
+}
